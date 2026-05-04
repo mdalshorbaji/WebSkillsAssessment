@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Skills Assessment</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero card">
+      <p class="eyebrow">Web Development Entry Assessment</p>
+      <h1>Web Skills Assessment</h1>
+      <p class="lead">This assessment measures the student’s current web development skills before joining the Web Security course.</p>
+      <p><strong>Instructor:</strong> Eng.Mohammad AlShorbaji</p>
+      <a class="btn primary" href="#levels">Start Challenge</a>
+      <!-- Level 1 flag: flag{inspect_html_comment} -->
+    </section>
+
+    <section class="card">
+      <h2>Assessment Requirements</h2>
+    <ul>
+      <li>You must complete all 6 levels.</li>
+      <li>Each level contains one hidden flag.</li>
+      <li>Flag format: <code>flag{...}</code></li>
+    </ul>
+      <p class="flag-format">Flag format: <code>flag{example}</code></p>
+    </section>
+
+    <section class="card">
+  <h2>Video Submission</h2>
+    <p>You must submit a screen recording video.</p>
+    <ul>
+      <li>Show how you solved each level.</li>
+      <li>Show the flag clearly.</li>
+      <li>Explain the issue and how to fix it.</li>
+    </ul>
+    </section>
+
+    <section class="card">
+      <h2>Rules</h2>
+      <ul>
+        <li>Use only the browser and built-in developer tools.</li>
+        <li>Do not use automated scanners or attack tools.</li>
+        <li>Do not test or attack any external website.</li>
+        <li>Submitting flags without explanation is not accepted.</li>
+        <li>Your answers must describe your own steps.</li>
+      </ul>
+    </section>
+
+
+
+    <section id="levels" class="card">
+      <h2>Level 1: Page Inspection</h2>
+      <p><strong>Task:</strong> Inspect the page source and identify the hidden flag.</p>
+      <p><strong>Required in report:</strong> Explain where the flag was located and why sensitive data should not be placed in client-side files.</p>
+    </section>
+
+    <section class="card">
+      <h2>Level 2: Login Logic</h2>
+      <p><strong>Task:</strong> Test the login form and analyze where the login decision is being made.</p>
+      <form id="loginForm" autocomplete="off">
+        <label for="username">Username</label>
+        <input id="username" placeholder="Enter username" />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" />
+        <button type="submit">Login</button>
+      </form>
+      <pre id="loginResult" aria-live="polite"></pre>
+      <p><strong>Required in report:</strong> Explain the authentication weakness and how it should be implemented securely.</p>
+    </section>
+
+    <section class="card">
+      <h2>Level 3: User Input Handling</h2>
+      <p><strong>Task:</strong> Test how the application handles and displays user input.</p>
+      <label for="commentInput">Comment</label>
+      <input id="commentInput" placeholder="Write a comment" />
+      <button id="commentBtn">Submit Comment</button>
+      <div id="comments" class="comments"></div>
+      <p><strong>Required in report:</strong> Explain the input/output handling issue and how to prevent it.</p>
+    </section>
+
+    <section class="card">
+      <h2>Level 4: API Request Analysis</h2>
+      <p><strong>Task:</strong> Use the Network tab to analyze the profile request and determine whether data access is properly controlled.</p>
+      <button id="loadUser">Load My Profile</button>
+      <pre id="userResult" aria-live="polite"></pre>
+      <p><strong>Required in report:</strong> Explain the API access-control issue and how the server should validate access.</p>
+    </section>
+
+    <section class="card">
+      <h2>Level 5: Restricted Page Access</h2>
+      <p><strong>Task:</strong> Determine whether restricted pages are protected by real server-side authorization.</p>
+      <p><strong>Required in report:</strong> Explain why hiding a page path is not a security control.</p>
+    </section>
+
+    <section class="card">
+      <h2>Level 6: Public Configuration Files</h2>
+      <p><strong>Task:</strong> Review public website files and determine whether they expose sensitive paths.</p>
+      <p><strong>Required in report:</strong> Explain why public files must not reveal sensitive resources.</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
