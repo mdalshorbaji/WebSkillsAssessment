@@ -12,9 +12,10 @@ This project is a web-based CTF challenge used to assess students' web developme
 Clone the repository:
 
 git clone <repo-link>
-cd WebSkillsAssessment
-Install dependencies:
 
+cd WebSkillsAssessment
+
+Install dependencies:
 npm install
 
 ## Run the Project
